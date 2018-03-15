@@ -29,7 +29,7 @@ yarn test
 
 ## Objective:
 
-The objective is to make a _(mock)_ API call to get JSON data, which is an array of SVG elements. After stashing that data in Redux, we want you to display the SVGs so that when you hover or click on each SVG, it will render the hex color code as text instead of the the SVG. As a bonus, we'd like you to randomize the color of every SVG so that on each page reload the colors of every React logo changes.   
+The objective is to make a _(mock)_ API call to get JSON data, which is an array of SVG elements. After stashing that data in Redux, we want you to display the SVGs so that when you hover or click on each SVG, it will render the hex color code as text instead of the the SVG. As a bonus, we'd like you to randomize the color of every SVG so that on each page reload the colors of every React logo changes.
 
 ## Instructions:
 
@@ -45,9 +45,9 @@ The objective is to make a _(mock)_ API call to get JSON data, which is an array
 
 Please stick to using the built in Jest/Enzyme test tools for all your unit tests. We'd like to see the following things tested:
 
-1. Write unit tests for the [apiMiddleware](https://github.com/membean/react-challenge/blob/master/src/test/apiMiddleware.test.js).
-2. Write unit tests for the [rootReducer](https://github.com/membean/react-challenge/blob/master/src/test/rootReducer.test.js).
-3. Write as many unit tests as you think are necessary for the code you write in the [App](https://github.com/membean/react-challenge/blob/master/src/test/App.test.js) component.
+1. Write unit tests for the [apiMiddleware](https://github.com/membean/react-challenge/blob/master/src/tests/apiMiddleware.test.js).
+2. Write unit tests for the [rootReducer](https://github.com/membean/react-challenge/blob/master/src/tests/rootReducer.test.js).
+3. Write as many unit tests as you think are necessary for the code you write in the [App](https://github.com/membean/react-challenge/blob/master/src/tests/App.test.js) component.
 
 ## Submission:
 
