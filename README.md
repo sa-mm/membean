@@ -6,12 +6,12 @@ To get started you'll need to clone this repository:
 
 ```
 git clone git@github.com:membean/react-challenge.git
+cd react-challenge
 ```
 
 Install dependencies:
 
 ```
-cd react-challenge
 yarn
 ```
 
