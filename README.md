@@ -31,6 +31,9 @@ yarn test
 
 The objective is to make a _(mock)_ API call to get JSON data, which is an array of SVG elements. After stashing that data in Redux, we want you to display the SVGs so that when you hover or click on each SVG, it will render the hex color code as text instead of the the SVG. As a bonus, we'd like you to randomize the color of every SVG so that on each page reload the colors of every React logo changes.
 
+![example](https://github.com/membean/react-challenge/blob/master/example.gif)
+
+
 ## Instructions:
 
 - `fetch()` is mocked on the window. You can use it exactly as you would use `fetch()` normally, except that you do **not** need to call `.json()` on the response. We return the response body by default.
