@@ -1,20 +1,50 @@
 # Membean React Code Test
 
 ## Setup:
-This is just an out of the box Create-React-App. You can install all dependencies by running `yarn` after cloning
-and using `yarn start` to run the app. `yarn test` will run the unit tests.
+
+To get started you'll need to clone this repository:
+
+```
+git clone git@github.com:membean/react-challenge.git
+```
+
+Install dependencies:
+
+```
+cd react-challenge
+yarn
+```
+
+To run the app:
+
+```
+yarn start
+```
+
+To run the tests:
+
+```
+yarn test
+```
+
+## Objective:
+
+The objective is to make a _(mock)_ API call to get JSON data, which is an array of SVG elements. After stashing that data in Redux, we want you to display the SVGs so that when you hover or click on each SVG, it will render the hex color code as text instead of the the SVG. As a bonus, we'd like you to randomize the color of every SVG so that on each page reload the colors of every React logo changes.   
 
 ## Instructions:
-1. Write an application that calls the mock api and uses *redux api middleware* to persist it in state.
-2. Wire the `App.js` component up to your Redux store somehow and display all svgs returned in the mock API call on the page.
-3. Add some events on the svgs so that when you hover or click on them it displays the hex color code instead of the the svg.
-4. Please write as many unit tests as you think are necessary for the code you write. 
 
-Notes:
-- `fetch()` is mocked on the window. You use it the same as normal except you do not need to call .json() on the response
-object to get the response body, the respone body is returned by default. Please look at `/src/api/mockFetch.js` to see
-the implementation and the json being returned.
-- Please stick to using the built in Jest/Enzyme test tools for all your unit tests.
+- `fetch()` is mocked on the window. You can use it exactly as you would use `fetch()` normally, except that you do **not** need to call `.json()` on the response. We return the response body by default.
+- Look at [/src/api/mockFetch.js`](https://github.com/membean/react-challenge/blob/master/src/api/mockFetch.js) to see the JSON data that is returned.
 
-Bonus:
-- Randomize the color of every React svg so that every time you reload the page you get different colored logos.
+1. Your API call should be made using the provided *Redux API Middleware* file at [/src/store/apiMiddleware.js](https://github.com/membean/react-challenge/blob/master/src/store/apiMiddleware.js).
+2. Returned data should be stashed in the Redux store _(obviously)_.
+3. Wire up the [App.js](https://github.com/membean/react-challenge/blob/master/src/App.js) component to read data from the Redux store and display the SVGs.
+4. Add either a hover or click event to display hex color codes instead of the SVG.
+
+## Testing:
+
+Please stick to using the built in Jest/Enzyme test tools for all your unit tests. We'd like to see the following things tested:
+
+1. Write unit tests for the [apiMiddleware](https://github.com/membean/react-challenge/blob/master/src/test/apiMiddleware.test.js).
+2. Write unit tests for the [rootReducer](https://github.com/membean/react-challenge/blob/master/src/test/rootReducer.test.js).
+3. Write as many unit tests as you think are necessary for the code you write in the [App](https://github.com/membean/react-challenge/blob/master/src/test/App.test.js) component.
