@@ -48,3 +48,7 @@ Please stick to using the built in Jest/Enzyme test tools for all your unit test
 1. Write unit tests for the [apiMiddleware](https://github.com/membean/react-challenge/blob/master/src/test/apiMiddleware.test.js).
 2. Write unit tests for the [rootReducer](https://github.com/membean/react-challenge/blob/master/src/test/rootReducer.test.js).
 3. Write as many unit tests as you think are necessary for the code you write in the [App](https://github.com/membean/react-challenge/blob/master/src/test/App.test.js) component.
+
+## Submission:
+
+Once you are finished, please push your cloned repo to your Github account _(i.e. https://github.com/YOUR_USERNAME/react-challenge)_ and email the URL to us at [brant@membean.com](brant@membean.com).
