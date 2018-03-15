@@ -34,7 +34,7 @@ The objective is to make a _(mock)_ API call to get JSON data, which is an array
 ## Instructions:
 
 - `fetch()` is mocked on the window. You can use it exactly as you would use `fetch()` normally, except that you do **not** need to call `.json()` on the response. We return the response body by default.
-- Look at [/src/api/mockFetch.js`](https://github.com/membean/react-challenge/blob/master/src/api/mockFetch.js) to see the JSON data that is returned.
+- Look at [/src/api/mockFetch.js](https://github.com/membean/react-challenge/blob/master/src/api/mockFetch.js) to see the JSON data that is returned.
 
 1. Your API call should be made using the provided *Redux API Middleware* file at [/src/store/apiMiddleware.js](https://github.com/membean/react-challenge/blob/master/src/store/apiMiddleware.js).
 2. Returned data should be stashed in the Redux store _(obviously)_.
