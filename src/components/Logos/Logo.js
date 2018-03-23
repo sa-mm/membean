@@ -11,11 +11,7 @@ const Logo = props => {
     });
   };
 
-  return (
-    <svg {...svg.props} width={224}>
-      {renderChildren(svg.props.children, hex)}
-    </svg>
-  );
+  return <svg {...svg.props}>{renderChildren(svg.props.children, hex)}</svg>;
 };
 
 Logo.propTypes = {
