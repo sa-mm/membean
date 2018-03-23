@@ -1,16 +1,41 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { callApi } from "./store/rootReducer";
+import "./App.css";
+import Logos from "./components/Logos";
 
-class App extends Component {
+const mapStateToProps = store => ({ apiResponse: store.apiResponse });
+const mapDispatchToProps = dispatch => {
+  return {
+    callApi: () => dispatch(callApi())
+  };
+};
+
+export class App extends Component {
+  componentWillMount() {
+    this.props.callApi();
+  }
+
   render() {
+    const { apiResponse } = this.props;
+
     return (
-        <div className="App">
-          <div className="logos">
-            {this.props.apiResponse && 'call fetch() and use the response here'}
-          </div>
+      <div className="App">
+        <div className="logos">
+          {apiResponse &&
+            apiResponse.images && (
+              <Logos randomized images={apiResponse.images} />
+            )}
         </div>
+      </div>
     );
   }
 }
 
-export default App;
+App.propTypes = {
+  callApi: PropTypes.func.isRequired,
+  apiResponse: PropTypes.object
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
