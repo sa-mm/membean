@@ -5,12 +5,8 @@ import { callApi } from "./store/rootReducer";
 import "./App.css";
 import Logos from "./components/Logos";
 
-const mapStateToProps = store => ({ apiResponse: store.apiResponse });
-const mapDispatchToProps = dispatch => {
-  return {
-    callApi: () => dispatch(callApi())
-  };
-};
+const mapStateToProps = ({ apiResponse }) => ({ apiResponse });
+const mapDispatchToProps = { callApi };
 
 export class App extends Component {
   componentWillMount() {
