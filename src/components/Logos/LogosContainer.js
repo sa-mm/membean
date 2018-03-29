@@ -6,7 +6,7 @@ import { imagesStateChange, clickStateChange } from "./logosStateChanges";
 
 class LogosContainer extends React.Component {
   state = {
-    toggled: { idx: null, displayHex: false },
+    toggled: { id: null, displayHex: false },
     images: [],
     imagesCount: 0
   };
@@ -15,8 +15,8 @@ class LogosContainer extends React.Component {
     this.setState(imagesStateChange);
   }
 
-  handleClick = idx => event => {
-    this.setState(clickStateChange(idx));
+  handleClick = id => event => {
+    this.setState(clickStateChange(id));
   };
 
   render() {
@@ -24,9 +24,9 @@ class LogosContainer extends React.Component {
 
     return (
       <React.Fragment>
-        {images.map(({ svg, hex, id }, idx) => (
-          <div key={id} onClick={this.handleClick(idx)}>
-            {toggled.idx === idx && toggled.displayHex ? (
+        {images.map(({ svg, hex, id }) => (
+          <div key={id} onClick={this.handleClick(id)}>
+            {toggled.id === id && toggled.displayHex ? (
               <div
                 style={{
                   width: "224px",

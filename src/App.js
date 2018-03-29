@@ -20,9 +20,7 @@ export class App extends Component {
       <div className="App">
         <div className="logos">
           {apiResponse &&
-            apiResponse.images && (
-              <Logos randomized images={apiResponse.images} />
-            )}
+            apiResponse.images && <Logos images={apiResponse.images} />}
         </div>
       </div>
     );

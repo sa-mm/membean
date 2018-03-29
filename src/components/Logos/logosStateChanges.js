@@ -17,19 +17,19 @@ export const imagesStateChange = (prevState, props) => {
   };
 };
 
-export const clickStateChange = idx => prevState => {
+export const clickStateChange = id => prevState => {
   const { toggled } = prevState;
-  if (toggled.idx === idx) {
+  if (toggled.id === id) {
     return {
       toggled: {
-        idx,
+        id,
         displayHex: !prevState.toggled.displayHex
       }
     };
   } else {
     return {
       toggled: {
-        idx,
+        id,
         displayHex: true
       }
     };

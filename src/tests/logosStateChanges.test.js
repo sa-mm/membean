@@ -5,7 +5,7 @@ import {
 } from "../components/Logos/logosStateChanges";
 
 const initialState = {
-  toggled: { idx: null, hex: false },
+  toggled: { id: null, hex: false },
   images: [],
   imagesCount: 0
 };
@@ -56,19 +56,19 @@ describe("clickStateChange tests", () => {
     const actual = clickStateChange(1)(initialState);
     expect(actual).toEqual({
       toggled: {
-        idx: 1,
+        id: 1,
         displayHex: true
       }
     });
   });
 
-  it("toggles hex state if passed idx equals toggled idx", () => {
+  it("toggles hex state if passed id equals toggled id", () => {
     const actual = clickStateChange(1)({
-      toggled: { idx: 1, displayHex: true }
+      toggled: { id: 1, displayHex: true }
     });
     expect(actual).toEqual({
       toggled: {
-        idx: 1,
+        id: 1,
         displayHex: false
       }
     });
