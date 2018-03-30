@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import { callApi } from "./store/rootReducer";
 import "./App.css";
 import Logos from "./components/Logos";
+import Random1 from "./components/Random1";
+import Random2 from "./components/Random2";
 
 const mapStateToProps = ({ apiResponse }) => ({ apiResponse });
 const mapDispatchToProps = { callApi };
@@ -17,11 +19,15 @@ export class App extends Component {
     const { apiResponse } = this.props;
 
     return (
-      <div className="App">
-        <div className="logos">
-          {apiResponse &&
-            apiResponse.images && <Logos images={apiResponse.images} />}
+      <div>
+        <div className="App">
+          <div className="logos">
+            {apiResponse &&
+              apiResponse.images && <Logos images={apiResponse.images} />}
+          </div>
         </div>
+        <Random1 />
+        <Random2 />
       </div>
     );
   }
